@@ -2,8 +2,8 @@ Getting and Cleaning Data Course Project
 =======================================
 
 Repo contains 3 files:
-  README.md
-  CodeBook.md
+  README.md, 
+  CodeBook.md, 
   run_analysis.R
   
 =======================================
@@ -15,31 +15,31 @@ to clean up and summarise the result tidy data set.
 Script run_analysis.R:
 
 Input data: 
-  files subject_train.txt, X_train.txt, y_train.txt, 
-        subject_test.txt, X_test.txt, y_test.txt, features.txt, activity_labels.txt
-        from given UCI HAR Dataset.
+  subject_train.txt, X_train.txt, y_train.txt, 
+  subject_test.txt, X_test.txt, y_test.txt, features.txt, activity_labels.txt
+  from given UCI HAR Dataset
 
 Output data: 
-  file resTidyData.txt
+  resTidyData.txt
 
 Packages:
   dplyr
 
 Functions:
-  tbl_dt
-  read.table
-  data.frame
-  rbind
-  cbind
-  names
-  c
-  grep
-  subset
-  gsub
-  length
-  group_by
-  summarise_each
-  %>%
+  tbl_dt, 
+  read.table, 
+  data.frame, 
+  rbind, 
+  cbind, 
+  names, 
+  c, 
+  grep, 
+  subset, 
+  gsub, 
+  length, 
+  group_by, 
+  summarise_each, 
+  %>%, 
   write.table
 
 Script overview:
