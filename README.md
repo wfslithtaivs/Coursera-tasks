@@ -48,5 +48,7 @@ Script overview:
 - Extracting only the measurements on the mean and standard deviation for each measurement. 
 - Applying descriptive activity names to name the activities in the data set
 - Appropriately labeling the data set with descriptive variable names. 
-- From the data set in step 4, creating a second, independent tidy data set with the average of each variable for each activity and each subject and saving it in text file.
+- Creating independent tidy data set with the average of each variable for each activity and each subject.
+- Saving new data set in the text file.
+
 ====================
