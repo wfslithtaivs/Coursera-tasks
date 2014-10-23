@@ -42,7 +42,7 @@ Functions:
   %>%
   write.table
 
-Script overwiew:
+Script overview:
 - Reading input files to data.tables.
 - Merging the training and the test sets to create one data set.
 - Extracting only the measurements on the mean and standard deviation for each measurement. 
