@@ -33,8 +33,12 @@ labels <- tbl_dt(read.table("activity_labels.txt", header=F, stringsAsFactors=F)
 for(i in 1:length(labels$V2))
         {mData$activity <- gsub(i, labels$V2[i], mData$activity)}
 
+names(mData) <- gsub("[.]", "", names(mData))
+names(mData) <- gsub("mean", "Mean", names(mData))
+names(mData) <- gsub("std", "Std", names(mData))
+
+
 #Making result tidy data and saving in file
-library(dplyr)
 averageData <- group_by(mData, subject, activity) %>%
                                 summarise_each(funs(mean))
 
