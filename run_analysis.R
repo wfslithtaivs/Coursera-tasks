@@ -33,6 +33,8 @@ labels <- tbl_dt(read.table("activity_labels.txt", header=F, stringsAsFactors=F)
 for(i in 1:length(labels$V2))
         {mData$activity <- gsub(i, labels$V2[i], mData$activity)}
 
+#Appropriately labels the data set with descriptive variable names - removing dots and making 
+# all the names in one style - first symbol in lower case, every following meaningful part capitalized
 names(mData) <- gsub("[.]", "", names(mData))
 names(mData) <- gsub("mean", "Mean", names(mData))
 names(mData) <- gsub("std", "Std", names(mData))
