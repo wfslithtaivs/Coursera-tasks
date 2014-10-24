@@ -1,25 +1,29 @@
 Getting and Cleaning Data Course Project
 =======================================
 
-Repo contains 3 files:
+Repo contains 4 files:
   README.md, 
   CodeBook.md, 
-  run_analysis.R
+  run_analysis.R,
+  resTidyData.txt
   
 =======================================
 
 CodeBook.md describes the variables, the data, and transformations performed 
-to clean up and summarise the result tidy data set.
+to combine, clean up and summarise the resulting tidy data set.
   
 =======================================
 Script run_analysis.R:
 
-Input data: 
+Note: Before running script, please, make sure that all input files stored in your working directory (check "getwd()") or use "setwd(dir)" to set appropriate working directory.  
+Output file will be saved into your working directory.
+
+Input files: 
   subject_train.txt, X_train.txt, y_train.txt, 
   subject_test.txt, X_test.txt, y_test.txt, features.txt, activity_labels.txt
   from given UCI HAR Dataset
 
-Output data: 
+Output files: 
   resTidyData.txt
 
 Packages:
