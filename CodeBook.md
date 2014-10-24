@@ -1,52 +1,53 @@
 <div id="code-book-for-getting-and-cleaning-data-course-project" class="section level1">
 <h2>Code Book for Getting and Cleaning Data Course Project</h2>
-<p>Input data from given UCI HAR Dataset:</p>
 
+<h3>Problem statement</h3>
+<p>The purpose of this Course Project is to demonstrate student abilities to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. </p>
+
+<h3>Raw data description</h3>
+
+<p>Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. For purpose of Course Project was extracted data of time/frequency pre-processed sensor signals collected during experiment for 6 types of activities for 30 persons (splited randomly for generating training (70%) and test (30%) groups). </p>
+<p>Input files:</p>
 <table border="1">
    <tr>
     <th><strong>Name in the given data set</strong></th>
     <th><strong>Data</strong></th>
-    <th><strong>Script name</strong></th>
+    <th><strong>Description<strong></th>
    </tr>
-   <tr><td>subject_train.txt</td><td>7352 obs. of 1 variable</td><td>subject_train </td></tr>
-   <tr><td>X_train.txt</td><td>7352 obs. of 561 variable</td><td>X_train</td></tr>
-   <tr><td>y_train.txt</td><td>7352 obs. of 1 variable</td><td>y_train</td></tr>
-   <tr><td>subject_test.txt</td><td>2947 obs. of 1 variable</td><td>subject_test</td></tr>
-   <tr><td>X_test.txt</td><td>2947 obs. of 561 variable</td><td>X_test</td></tr>
-   <tr><td>y_test.txt</td><td>2947 obs. of 1 variable</td><td>y_test</td></tr>
-   <tr><td>features.txt</td><td>561 obs. of 2 variable</td><td>features</td></tr>
-   <tr><td>activity_labels.txt</td><td>6 obs. of 2 variables</td><td>labels</td></tr>
+   <tr><td>subject_train.txt</td><td>7352 obs. of 1 variable</td><td>Vector of persons in training set for each experiment observation </td></tr>
+   <tr><td>X_train.txt</td><td>7352 obs. of 561 variable</td><td>Table of experimental observations of training group</td></tr>
+   <tr><td>y_train.txt</td><td>7352 obs. of 1 variable</td><td>Vector of numeric codes of activities in training set for each experiment observation</td></tr>
+   <tr><td>subject_test.txt</td><td>2947 obs. of 1 variable</td><td>Vector of persons in test set for each experiment observation </td></tr>
+   <tr><td>X_test.txt</td><td>2947 obs. of 561 variable</td><td>Table of experimental observations of test group</td></tr>
+   <tr><td>y_test.txt</td><td>2947 obs. of 1 variable</td><td>Vector of numeric codes of activities in training set for each experiment observation</td></tr>
+   <tr><td>features.txt</td><td>561 obs. of 2 variable</td><td>Vector of names of time/frequency pre-processed sensor signals collected during experiment</td></tr>
+   <tr><td>activity_labels.txt</td><td>6 obs. of 2 variables</td><td>Activity labels</td></tr>
   </table>
 <hr></hr>
-<p>Loaded data combined into data set mData with following structure: </p>
+<h3>Steps of data tidying</h3>
+
+<p>Loaded data are combined into data.frame using the following procedure: </p>
+<ol>
+ <li>vectors of subjects, activities and table of experimental observations for training and test data sets were bound by rows </li>
+ <li>resulting data sets were bound by columns (cbind) in the “subject-activity-sensor_signals”-order into one data.frame with the first column contains an identifier of the subject who carried out the experiment, second column contains numeric codes of activities and the following 561 rows contain sensor signals data  </li>
+ <li>resulting data.frame combined from the data of training and test experiment groups contains 10299 obs. of 563 variables</li>
+</ol>
+
+<p>According to the task, resulting data.frame was reduced to the 10299 obs. of 81 variables contained only the measurements with words "mean" and "std" in the column names.</p>
+
+<p>Reduced data.frame set was normalized to "tidy data" by:</p>
 <ul>
- <li>subject_train binded by rows with subject_test, the same done with y_train/y_test, X_train/X_test</li>
- <li>resulted data.frames binded by columns in the “subject, y, X” order</li>
- <li>resulted data.frame named with the “label” vector, “subject” &lt;- subject, “activity” &lt;- y </li>
- <li>mData (data.frame) 10299 obs. of 563 variables (561 obs. from training data + subject + activity)</li>
+<li>columns were named with the vector of sensor signals names</li>
+<li>column with the subject was renamed to "subject"</li> 
+<li>column with the activities was renamed to "activity" </li>
+<li>numeric codes of activities in "activity"-column were renamed according to activity labels vector</li>
+<li>column names normilized by removing all dots and making all the names in one style - first symbol in lower case, every following meaningful parts capitalized</li>
 </ul>
 
-
-<p>According to the task, mData was reduced to the 10299 obs. of 81 variables contained only the measurements with words "mean" and "std" in the columns names.</p>
-
-
-<p>Reduced mData set was normalized to "tidy data" by:</p>
+<p><italic>Note:</italic></p>
 <ul>
-<li>adding activity names from "labels"</li>
-<li>normalizing columns names by removing all dots and making all the names in one style - first symbol in lower case, every following meaningful part capitalized</li>
-</ul>
-
-<p>Notes:</p>
-<ul>
-<li>activity names didn’t updated to lower case and removing underscore because it is data and shouldn’t been changed during tidying</li>
 <li>columns names left with some capitalized symbols just to keep readability</li>
 </ul>
 <hr></hr>
-<p>Resulted tidy data set “averageData” provides average time and frequency measurements for every activity for every subject and contains 180 obs. of 81 variables.</p>
-
-<p>Resulted tidy data has:</p>
-<ul>
-<li>Each variable in a column.</li>
-<li>Each observation in a row.</li>
-<li>Each type of observational unit forms a table.</li>
-</ul>
+<p>Normilized data.frame was summarized by each pair of subject/activity with calculating an averages for sensor signals time/frequency measurements and contains 180 obs. of 81 variables.</p>
+<hr></hr>
