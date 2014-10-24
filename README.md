@@ -49,6 +49,6 @@ Script overview:
 - Applying descriptive activity names to name the activities in the data set
 - Appropriately labeling the data set with descriptive variable names. 
 - Creating independent tidy data set with the average of each variable for each activity and each subject.
-- Saving new data set in the text file.
+- Saving new data set in the text file "resTidyData.txt".
 
 ====================
