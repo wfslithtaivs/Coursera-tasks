@@ -33,15 +33,15 @@
  <li>resulting data.frame combined from the data of training and test experiment groups contains 10299 obs. of 563 variables</li>
 </ol>
 
-<p>According to the task, resulting data.frame was reduced to the 10299 obs. of 81 variables contained only the measurements with words "mean" and "std" in the column names.</p>
+<p>According to the task, resulting data.frame was reduced to the 10299 obs. of 81 variables containing only the measurements with words "mean" and "std" in the column names.</p>
 
 <p>Reduced data.frame set was normalized to "tidy data" by:</p>
 <ul>
-<li>columns were named with the vector of sensor signals names</li>
-<li>column with the subject was renamed to "subject"</li> 
-<li>column with the activities was renamed to "activity" </li>
-<li>numeric codes of activities in "activity"-column were renamed according to activity labels vector</li>
-<li>column names normilized by removing all dots and making all the names in one style (also known as CamelCase - see http://en.wikipedia.org/wiki/CamelCase) - first symbol in lower case, every following meaningful parts capitalized</li>
+<li>columns were naming with the vector of sensor signals names</li>
+<li>column with the subject was renaming to "subject"</li> 
+<li>column with the activities was renaming to "activity" </li>
+<li>numeric codes of activities in "activity"-column were renaming according to activity labels vector</li>
+<li>column names normilizing by removing all dots and making all the names in one style (also known as CamelCase - see http://en.wikipedia.org/wiki/CamelCase) - first symbol in lower case, every following meaningful parts capitalized</li>
 </ul>
 
 <p><italic>Note:</italic></p>
