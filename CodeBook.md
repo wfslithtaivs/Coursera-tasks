@@ -41,12 +41,12 @@
 <li>column with the subject was renamed to "subject"</li> 
 <li>column with the activities was renamed to "activity" </li>
 <li>numeric codes of activities in "activity"-column were renamed according to activity labels vector</li>
-<li>column names normilized by removing all dots and making all the names in one style - first symbol in lower case, every following meaningful parts capitalized</li>
+<li>column names normilized by removing all dots and making all the names in one style (also known as CamelCase - see http://en.wikipedia.org/wiki/CamelCase) - first symbol in lower case, every following meaningful parts capitalized</li>
 </ul>
 
 <p><italic>Note:</italic></p>
 <ul>
-<li>columns names left with some capitalized symbols just to keep readability</li>
+<li>columns names left with some capitalized symbols and wasn't expanded to  full names (using gsub and vector of appropriate replacements for each short name) just to keep readability.</li>
 </ul>
 <hr></hr>
 <h3>Course Project result</h3>
