@@ -6,7 +6,7 @@
 
 <h3>Raw data description</h3>
 
-<p>Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. For purpose of Course Project was extracted data of time/frequency pre-processed sensor signals collected during experiment for 6 types of activities for 30 persons (splited randomly for generating training (70%) and test (30%) groups). </p>
+<p>The Human Activity Recognition database was built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. For purpose of Course Project data of time/frequency pre-processed sensor signals collected during experiment for 6 types of activities for 30 persons (splited randomly for generating training (70%) and test (30%) groups) were extracted. </p>
 <p>Input files:</p>
 <table border="1">
    <tr>
@@ -49,5 +49,6 @@
 <li>columns names left with some capitalized symbols just to keep readability</li>
 </ul>
 <hr></hr>
+<h3>Course Project result</h3>
 <p>Normilized data.frame was summarized by each pair of subject/activity with calculating an averages for sensor signals time/frequency measurements and contains 180 obs. of 81 variables.</p>
 <hr></hr>
